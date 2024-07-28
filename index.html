@@ -7,7 +7,6 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <script src="main.js"></script>
     <!---fuente Sora-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -15,9 +14,15 @@
     <!--AOS-->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <title>Juan Carlos TM</title>
 </head>
 <body>
+    <div class="loading-page">
+        <svg  viewBox="0 0 1320 300">
+            <text x="50%" y="50%" text-anchor="middle" dominant-baseline="middle" class="animate-stroke2">JC</text>
+        </svg>
+    </div>
     <div class="container">
         <div class="row nav col-lg-12 col-md-12">
             <h1 class="logo col-lg-1 col-md-1 col-sm-12"><span>J</span>C</h1>
@@ -32,7 +37,7 @@
        <main>
         <div class="banner row">
            <div class="intro">
-            <svg viewBox="0 0 1320 300">
+            <svg  viewBox="0 0 1320 300">
                 <text x="50%" y="50%" text-anchor="middle" dominant-baseline="middle" class="animate-stroke">JC</text>
             </svg>
            </div>
@@ -206,6 +211,9 @@
         </div>
        </main>
     </div>
+    
+    
+
     <footer>
 
             <div class="row container" style="position: relative;z-index: 1;">
@@ -227,10 +235,41 @@
               </div>
               <img style="position: absolute;z-index: 0;right: 0;" src="/assets/backgrounds/footer.png" alt="">
     </footer>
+    
     <script>
         AOS.init({
             duration:3000
         });
-      </script>
+    </script>
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+     <script>
+       window.addEventListener("load", () => {
+        gsap.fromTo(
+            ".loading-page",
+            { opacity: 1 },
+            {
+                opacity: 0,
+                display: "none",
+                duration: 1.5,
+                delay: 1.5,
+            }
+            );
+
+            gsap.fromTo(
+            ".logo-name",
+            {
+                y: 50,
+                opacity: 0,
+            },
+            {
+                y: 0,
+                opacity: 1,
+                duration: 1.5,
+                delay: 1.5,
+            }
+            );
+            });
+
+     </script>
 </body>
 </html>
