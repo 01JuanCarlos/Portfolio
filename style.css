@@ -1,4 +1,5 @@
   body {
+    min-width: 375px;
     background: rgb(6, 1, 17) !important;
     margin: 0;
     position: relative; 
@@ -233,6 +234,7 @@
     padding: 0px !important;
   }
   .proj-img{
+    padding: 0px  !important;
     max-height: 301px;
     width: 100%;
     display: flex;
