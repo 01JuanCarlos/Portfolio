@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <!---fuente Sora-->
@@ -13,9 +12,10 @@
     <link href="https://fonts.googleapis.com/css2?family=Sora:wght@100..800&display=swap" rel="stylesheet">
     <!--AOS-->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <title>Juan Carlos TM</title>
+    <!--swiper-->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+
+   <title>Juan Carlos TM</title>
 </head>
 <body>
     <!-- <div class="loading-page">
@@ -24,13 +24,22 @@
         </svg>
     </div>
     -->
+
+    <div class="theme-toggle">
+        <input type="checkbox" id="theme-switch" />
+        <label for="theme-switch" class="toggle-label">
+          <span class="toggle-sun"><img src="/assets/sun.png" width="15px" alt="Sun"></span>
+          <span class="toggle-moon"><img src="/assets/moon.png" width="15px" alt="Moon"></span>
+        </label>
+      </div>
+    
     <div class="container">
         <div class="row nav col-lg-12 col-md-12">
             <h1 class="logo col-lg-1 col-md-1 col-sm-12"><span>J</span>C</h1>
             <p class="col-lg-9 col-md-9 col-sm-12">juancarlostorresmiranda96@gmail.com</p>
             <div class="col-lg-2 col-md-2  col-sm-12">
-                <a  href="https://api.whatsapp.com/send?phone=928661474" >
-                    <button><img src="https://img.icons8.com/?size=100&id=16466&format=png&color=ffffff" width="35" height="35" alt="">contactar</button>
+                <a  href="https://api.whatsapp.com/send?phone=928661474"   class="btn_wtsp">
+                  <img src="https://img.icons8.com/?size=100&id=16466&format=png&color=ffffff" width="35" height="35" alt=""><span>contactar</span>
                 </a>
             </div>    
         </div>
@@ -39,14 +48,14 @@
         <div class="banner row">
            <div class="intro">
             <svg  viewBox="0 0 1320 300">
-                <text x="50%" y="50%" text-anchor="middle" dominant-baseline="middle" class="animate-stroke">JC</text>
+                <text x="50%" y="70%" text-anchor="middle" dominant-baseline="middle" class="animate-stroke">JC</text>
             </svg>
            </div>
             <div class="b-cont col-lg-6 col-md-6">
                <div class="ap1"  data-aos="fade-right">
-                   <h4>Hola, soy Juan Carlos</h4>
+                   <h4  class="text_title3">Hola, soy Juan Carlos</h4>
                    <h1>Desarrollador de software</h1>
-                   <p>Tecnico de la carrera
+                   <p  class="text_title4">Tecnico de la carrera
                     computación e informática con experiencia en gestión de base de
                     datos SQL, desarrollo y mantenimiento de aplicaciones web
                     y móviles.</p>
@@ -57,12 +66,12 @@
                 </div>
                 <div class="icon-list col-lg-4 col-md-7"  data-aos="fade-right">
                     <div class="icon"><a href="https://mail.google.com/mail/u/0/#search/juancarlostorresmiranda96%40gmail.com?compose=new"><img src="assets/Email.png" alt=""></a></div>
-                    <div class="icon"><a href="https://www.linkedin.com/in/juan-torres-miranda/"><img src="assets/LinkedIn 3.png" alt=""></i></a></div>
+                    <div class="icon"><a href="https://www.linkedin.com/in/juan-carlos-torres-miranda/"><img src="assets/LinkedIn 2.png" alt=""></i></a></div>
                     <div class="icon"><a href="https://github.com/01JuanCarlos"><img src="assets/GitHub.png" alt=""></a></div>
                 </div>
                </div>
             </div>
-            <div class="ap2 col-lg-6 col-md-6">
+            <div class="ap2 col-lg-4 col-md-6">
                 <img data-aos="fade-left" class="img_portada" src="assets/Mask group.png" alt="">
             </div>
         </div>
@@ -103,18 +112,35 @@
         </div>
         <div class="proyects">
             <div class="proj-title">
-                <img src="assets/Source Code.png" alt=""><h1>Proyetos Destacados</h1>
+                <img src="assets/Source Code.png" alt=""><h1 class="text_title1">Proyetos Destacados</h1>
             </div>
             <div class="proyects-list">
                 <div class="row proj" data-aos="fade-right">
                    <div class="cont-proj row">
-                        <div class="col-lg-8 col-md-12 proj-img">
+                        <div class="col-lg-8 col-md-12 proj-img " >
                             <img src="assets/proj1.png" alt="">
+
+<!--
+                            <div class="swiper-container-projects" >
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide" ><img   src="https://html.themexriver.com/archipark/home-one/assets/img/demo.jpg" alt=""></div>
+                                    <div class="swiper-slide" ><img   src="https://html.themexriver.com/archipark/home-one/assets/img/demo.jpg" alt=""></div>
+
+                                </div>
+                        
+                                <div class="swiper-button-next"></div>
+                                <div class="swiper-button-prev"></div>
+                        
+                                <div class="swiper-pagination"></div>
+                            </div>
+                       
+                        -->
+                            
                         </div>
                         <div class="col-lg-4 col-md-12  proj-descrip">
-                            <p>Empresarial</p>
-                            <h4>Página Web Corporativa con CMS</h4>
-                            <p>
+                            <p class="text_title3">Empresarial</p>
+                            <h4 class="text_title2">Página Web Corporativa con CMS</h4>
+                            <p class="text_title4">
                                 Desarrollé, junto con un compañero de trabajo,
                                 una página web para una empresa de
                                 ingeniería, equipada con un sistema de gestión 
@@ -174,9 +200,9 @@
                              <img src="assets/proj3.png" alt="">
                          </div>
                          <div class="col-lg-4 col-md-12  proj-descrip">
-                             <p>Empresarial</p>
-                             <h4>Página Web Interactiva con Animaciones Dinámicas</h4>
-                             <p>Esta página web la diseñe y desarrolle completamente
+                             <p class="text_title3">Empresarial</p>
+                             <h4 class="text_title2">Página Web Interactiva con Animaciones Dinámicas</h4>
+                             <p  class="text_title4">Esta página web la diseñe y desarrolle completamente
                                 en su parte frontal, se centra en ofrecer una experiencia
                                 visualmente atractiva y altamente interactiva.</p>
                              <div class="op-box">
@@ -202,9 +228,9 @@
                              <img src="assets/proj4.png" alt="">
                          </div>
                          <div class="col-lg-4 col-md-12  proj-descrip">
-                             <p>Academico</p>
-                             <h4>APP móvil restaurante Rincon de Vallejo</h4>
-                             <p>La aplicación facilita la comunicación entre el personal de servicio y
+                             <p  class="text_title3">Academico</p>
+                             <h4  class="text_title2">APP móvil restaurante Rincon de Vallejo</h4>
+                             <p  class="text_title4">La aplicación facilita la comunicación entre el personal de servicio y
                                 cocina, agilizando la toma de pedidos. Además, permite la gestión de
                                 menús y el seguimiento del estado de las ordenes.
                                 </p>
@@ -251,11 +277,19 @@
               <img style="position: absolute;z-index: 0;right: 0;" src="/assets/backgrounds/footer.png" alt="">
     </footer>
     
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <!--swiper js-->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>  
+
     <script>
         AOS.init({
             duration:3000
         });
     </script>
+    
      <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
      <script>
        window.addEventListener("load", () => {
@@ -286,5 +320,66 @@
             });
 
      </script>
+     <!-- Configuracion para cambiar TEMA de la pagina -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+        const toggleSwitch = document.getElementById('theme-switch');
+        const body = document.body;
+
+        // Comprobar el estado inicial del tema en localStorage
+        const currentTheme = localStorage.getItem('theme');
+        if (currentTheme === 'light') {
+            body.classList.add('light-theme');
+            toggleSwitch.checked = true; // Suponiendo que el switch está asociado al tema claro
+        } else if (currentTheme === 'dark') {
+            body.classList.add('dark-theme');
+            toggleSwitch.checked = false; // Suponiendo que el switch está asociado al tema oscuro
+        } else {
+            // Si no hay tema guardado, verificar la preferencia del sistema
+            if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+            body.classList.add('dark-theme');
+            toggleSwitch.checked = false; // Cambiar según la preferencia
+            } else {
+            body.classList.add('light-theme');
+            toggleSwitch.checked = true; // Cambiar según la preferencia
+            }
+        }
+
+        // Escuchar el cambio del switch
+        toggleSwitch.addEventListener('change', () => {
+            if (toggleSwitch.checked) {
+            body.classList.add('light-theme');
+            body.classList.remove('dark-theme'); // Asegurarse de eliminar la clase del tema oscuro
+            localStorage.setItem('theme', 'light'); // Guardar tema claro
+            } else {
+            body.classList.remove('light-theme'); // Asegurarse de eliminar la clase del tema claro
+            body.classList.add('dark-theme');
+            localStorage.setItem('theme', 'dark'); // Guardar tema oscuro
+            }
+        });
+        });
+
+    </script>
+  
+    <!--Swipe -->
+    <script>
+        const swiper = new Swiper('.swiper-container-projects', {
+            // Configuraciones
+            loop: true, // Activar bucle
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
+           /* autoplay: {
+                delay: 2500, // Velocidad de auto-reproducción en milisegundos
+                disableOnInteraction: false, // No desactivar cuando el usuario interactúe
+            },*/
+            speed: 600, // Velocidad de la transición en milisegundos
+        });
+    </script>
 </body>
 </html>
