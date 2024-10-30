@@ -814,7 +814,6 @@ body.dark-theme nav .nav-link {
 }
 
 #carouselExample3 .carousel-inner img {
-  height: 400px !important;  /* Ajusta esta altura según tus necesidades */
   object-fit: cover !important; /* Asegura que la imagen se adapte al contenedor sin distorsionarse */
 } 
 @media(max-width:370px) {
