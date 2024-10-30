@@ -284,6 +284,7 @@
   .proj-title {
     display: flex;
     justify-content: center;
+    align-items: center;
     gap: 12px;
   }
 
@@ -487,6 +488,9 @@
   }
 
   @media (max-width: 768px) {
+    .text_title1{
+      font-size: 24px !important;
+    }
     .animate-stroke{
       display: none;
     }
