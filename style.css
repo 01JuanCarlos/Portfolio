@@ -1,4 +1,5 @@
   body {
+    
     min-width: 320px;
     /*   background: rgb(6, 1, 17) !important;*/
     margin: 0;
@@ -811,3 +812,19 @@ body.dark-theme nav .nav-link {
 .carousel-item img{
   height: 100% !important;
 }
+
+#carouselExample3 .carousel-inner img {
+  height: 400px !important;  /* Ajusta esta altura según tus necesidades */
+  object-fit: cover !important; /* Asegura que la imagen se adapte al contenedor sin distorsionarse */
+} 
+@media(max-width:370px) {
+  .carousel{
+    height: 154px !important;
+ }
+
+}
+/*
+#carouselExample3 .carousel-inner {
+  height: 400px; 
+}*/
+/*
