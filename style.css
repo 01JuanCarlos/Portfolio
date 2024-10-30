@@ -487,6 +487,9 @@
   }
 
   @media (max-width: 768px) {
+    .animate-stroke{
+      display: none;
+    }
     .img_portada {
       display: none;
     }
@@ -797,4 +800,10 @@ body.dark-theme nav .nav-link {
 .swiper-pagination-bullet-active {
   background-color: #e94e35ff;
   /* Color del bullet activo */
+}
+.carousel{
+  overflow: hidden;
+}
+.carousel-item img{
+  height: 100% !important;
 }
