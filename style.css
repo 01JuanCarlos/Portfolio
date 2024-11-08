@@ -826,4 +826,23 @@ body.dark-theme nav .nav-link {
 #carouselExample3 .carousel-inner {
   height: 400px; 
 }*/
-/*
+
+/* Flecha anterior (izquierda) */
+.carousel-control-prev-icon {
+  background-image: url('assets/arrow_left.png') !important; /* Imagen para la flecha izquierda */
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 40px !important; /* Ajusta según el tamaño deseado */
+  height: 40px !important;
+  background-color: transparent;
+}
+
+/* Flecha siguiente (derecha) */
+.carousel-control-next-icon {
+  background-image: url('assets/arrow_right.png') !important; /* Imagen para la flecha derecha */
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 40px !important; /* Ajusta según el tamaño deseado */
+  height: 40px !important;
+  background-color: transparent;
+}
